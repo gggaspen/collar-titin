@@ -1,18 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const GetIpComponent = () => {
-  const [ip, setIp] = useState<string | null>(null);
-
   useEffect(() => {
-    const fetchIp = async () => {
-      const response = await fetch("http://ip-api.com/json/");
-      const data = await response.json();
-      console.log(data);
+    const fetchAndSaveIp = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/save-friend", {
+          method: "POST",
+        });
+        console.log(response);
+        if (!response.ok) {
+          console.error("Error en la solicitud", response.status);
+        }
+      } catch (error) {
+        console.error("Error en la solicitud", error);
+      }
     };
 
-    fetchIp();
+    fetchAndSaveIp();
   }, []);
 
   return <>{/* <div>Tu IP es: {ip}</div> */}</>;
