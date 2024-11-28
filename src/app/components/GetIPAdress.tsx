@@ -7,7 +7,7 @@ const GetIpComponent = () => {
     const fetchAndSaveIp = async () => {
       try {
         const response = await fetch(
-          "titin-back-production.up.railway.app/save-friend",
+          "https://titin-back-production.up.railway.app/save-friend",
           {
             // const response = await fetch("http://localhost:8080/save-friend", {
             method: "POST",
