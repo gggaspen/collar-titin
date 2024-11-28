@@ -6,9 +6,13 @@ const GetIpComponent = () => {
   useEffect(() => {
     const fetchAndSaveIp = async () => {
       try {
-        const response = await fetch("http://localhost:8080/save-friend", {
-          method: "POST",
-        });
+        const response = await fetch(
+          "titin-back-production.up.railway.app/save-friend",
+          {
+            // const response = await fetch("http://localhost:8080/save-friend", {
+            method: "POST",
+          }
+        );
         console.log(response);
         if (!response.ok) {
           console.error("Error en la solicitud", response.status);
