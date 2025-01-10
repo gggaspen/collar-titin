@@ -44,20 +44,36 @@ const Home = () => {
       <main
         className="bg-black h-screen w-screen md:pt-10 pt-4"
         style={{
-          backgroundImage: `url("/img/aquarium.jpeg")`,
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          height: windowHeight,
+          // backgroundImage: `url("/img/aquarium.jpeg")`,
+          // backgroundSize: "cover",
+          // backgroundAttachment: "fixed",
+          // height: windowHeight,
 
           position: "absolute",
           top: "0.1px",
           left: 0,
           right: 0,
           bottom: "0.1px",
-          overflowX: "hidden",
-          overflowY: "auto",
+          // overflowX: "hidden",
+          // overflowY: "auto",
         }}
       >
+        <Image
+          src="/img/aquarium.jpeg"
+          alt="instagram"
+          width="800"
+          height="0"
+          className="absolute"
+          style={{
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: windowHeight,
+            objectFit: "cover",
+            position: "fixed",
+          }}
+        />
+
         <section className="h-2/3 md:h-3/4 md:px-40 px-4 flex flex-col justify-center align-center text-center">
           <div className="relative overflow-hidden flex justify-center">
             <Cover
@@ -73,7 +89,7 @@ const Home = () => {
         {/* <CharGrid /> */}
         <Glitch />
 
-        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 pb-8">
+        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 pb-8 z-10">
           <Link href={"https://soundcloud.com/gggaspen"}>
             <Image
               src="https://i.postimg.cc/SQrpTQwq/soundcloud.png"
@@ -84,7 +100,12 @@ const Home = () => {
           </Link>
         </section>
 
-        <header className="h-14 md:px-40 px-4 relative bg-orange-600 flex items-center">
+        <header
+          className="h-14 md:px-40 px-4 relative bg-orange-600 flex items-center z-0"
+          style={{
+            boxShadow: "rgb(0, 0, 0) 0px -30px 90px 0px",
+          }}
+        >
           <Iframe {...iframeConfig} />
         </header>
 
