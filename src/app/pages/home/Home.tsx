@@ -44,20 +44,24 @@ const Home = () => {
       <main
         className="bg-black h-screen w-screen md:pt-10 pt-4"
         style={{
-          backgroundImage: `url("/img/nft (4).jpg")`,
+          backgroundImage: `url("/img/aquarium.jpeg")`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           height: windowHeight,
+
+          position: "absolute",
+          top: "0.1px",
+          left: 0,
+          right: 0,
+          bottom: "0.1px",
+          overflowX: "hidden",
+          overflowY: "auto",
         }}
       >
-        <header className="h-10 md:px-40 px-4 relative bg-black flex items-center">
-          <Iframe {...iframeConfig} />
-        </header>
-
-        <section className="h-1/2 md:h-1/2 md:px-40 px-4 flex flex-col justify-center align-center text-center">
+        <section className="h-2/3 md:h-3/4 md:px-40 px-4 flex flex-col justify-center align-center text-center">
           <div className="relative overflow-hidden flex justify-center">
             <Cover
-              src="/img/vol-1.png"
+              src="/img/3AWck2ZwBFi_7ngDMx7SW6esa6CvwrYArnuIeCP6_i0.jpg"
               size="md"
               shape="circle"
               classList={["mt-4"]}
@@ -80,7 +84,7 @@ const Home = () => {
           </Link>
         </section>
 
-        <header className="h-14 md:px-40 px-4 relative bg-red-900 flex items-center">
+        <header className="h-14 md:px-40 px-4 relative bg-orange-600 flex items-center">
           <Iframe {...iframeConfig} />
         </header>
 
@@ -95,17 +99,9 @@ const Home = () => {
           </Link>
         </section>
       </main>
-
-      <section className="w-full md:px-40 px-4 relative flex items-center my-4 justify-center py-4 bg-black opacity-50">
-        <Link href={"https://instagram.com/gggaspen"}>
-          <Image
-            src="https://i.postimg.cc/fLQhFVzW/spotify.png"
-            alt="spotify"
-            width="20"
-            height="20"
-          />
-        </Link>
-      </section>
+      <header className="w-full md:px-40 px-4 relative flex items-center my-4 justify-center py-4 bg-black">
+        <Iframe {...iframeConfig} />
+      </header>
     </>
   );
 };
