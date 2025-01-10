@@ -4,15 +4,13 @@ import "./Glitch.css";
 const Glitch = () => {
   return (
     <>
-      <div className="h-1/2 md:h-5/6 md:px-40 px-4 flex justify-center align-center">
+      <div className="md:px-40 px-4 flex justify-center align-center my-20">
         <div
-          //   className="glitch"
-          className={`glitch ${press_Start_2P.className}`}
+          className={`glitch ${press_Start_2P.className} text-2xl md:text-4xl`}
           data-text="GGGASPEN"
         >
           GGGASPEN
         </div>
-        <div className="glow">GGGASPEN</div>
       </div>
     </>
   );

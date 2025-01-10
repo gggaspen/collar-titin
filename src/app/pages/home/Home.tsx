@@ -51,6 +51,9 @@ const Home = () => {
 
         {/* <CharGrid /> */}
         <Glitch />
+        <header className="h-10 md:px-40 px-4 relative bg-gray-800 flex items-center">
+          <Iframe {...iframeConfig} />
+        </header>
       </main>
     </>
   );
