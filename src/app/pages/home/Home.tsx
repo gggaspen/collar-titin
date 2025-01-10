@@ -93,16 +93,19 @@ const Home = () => {
               height="0"
             />
           </Link>
-          {/* <Link href={"https://instagram.com/gggaspen"}>
-            <Image
-              src="https://i.postimg.cc/fLQhFVzW/spotify.png"
-              alt="instagram"
-              width="20"
-              height="20"
-            />
-          </Link> */}
         </section>
       </main>
+
+      <section className="w-full md:px-40 px-4 relative flex items-center my-4 justify-center py-4 bg-black opacity-50">
+        <Link href={"https://instagram.com/gggaspen"}>
+          <Image
+            src="https://i.postimg.cc/fLQhFVzW/spotify.png"
+            alt="spotify"
+            width="20"
+            height="20"
+          />
+        </Link>
+      </section>
     </>
   );
 };
