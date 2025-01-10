@@ -41,23 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <main
-        className="bg-black h-screen w-screen md:pt-10 pt-4"
-        style={{
-          // backgroundImage: `url("/img/aquarium.jpeg")`,
-          // backgroundSize: "cover",
-          // backgroundAttachment: "fixed",
-          // height: windowHeight,
-
-          position: "absolute",
-          top: "0.1px",
-          left: 0,
-          right: 0,
-          bottom: "0.1px",
-          // overflowX: "hidden",
-          // overflowY: "auto",
-        }}
-      >
+      <main className="bg-black h-screen w-screen md:pt-10 pt-4">
         <Image
           src="/img/aquarium.jpeg"
           alt="instagram"
