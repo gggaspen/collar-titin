@@ -3,6 +3,7 @@ import MainData from "@/app/interfaces/main-data.interface";
 import React from "react";
 import Image from "next/image";
 import CharGrid from "@/app/components/char-grid/CharGrid";
+import Glitch from "@/app/components/glitch/Glitch";
 
 const Home = () => {
   const data: MainData = {
@@ -34,12 +35,12 @@ const Home = () => {
           <Iframe {...iframeConfig} />
         </header>
 
-        <section className="h-1/2 md:h-5/6 md:px-40 px-4 flex justify-center align-center">
+        <section className="h-1/2 md:h-1/2 md:px-40 px-4 flex justify-center align-center">
           <div className="relative overflow-hidden flex">
             <Image
               width="500"
               height="100"
-              src="/img/hard-groove-vol1.jpeg"
+              src="/img/vol-1.png"
               alt="cover"
               style={{ width: "100%" }}
               objectFit="cover"
@@ -48,7 +49,8 @@ const Home = () => {
           </div>
         </section>
 
-        <CharGrid />
+        {/* <CharGrid /> */}
+        <Glitch />
       </main>
     </>
   );
