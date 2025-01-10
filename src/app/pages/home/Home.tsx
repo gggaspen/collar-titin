@@ -1,6 +1,8 @@
+"use client";
+
 import Iframe from "@/app/components/iframe/Iframe";
 import MainData from "@/app/interfaces/main-data.interface";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // import CharGrid from "@/app/components/char-grid/CharGrid";
 import Glitch from "@/app/components/glitch/Glitch";
@@ -31,6 +33,12 @@ const Home = () => {
 
   const { iframeConfig } = data;
 
+  const [windowHeight, setWindowHeight] = useState("0");
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight + "px");
+  }, []);
+
   return (
     <>
       <main
@@ -39,6 +47,7 @@ const Home = () => {
           backgroundImage: `url("/img/nft (4).jpg")`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
+          height: windowHeight,
         }}
       >
         <header className="h-10 md:px-40 px-4 relative bg-black flex items-center">
