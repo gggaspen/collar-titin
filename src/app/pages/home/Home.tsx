@@ -180,6 +180,43 @@ const Home = () => {
             />
           </Link>
         </section>
+
+        <div
+          style={{
+            width: "100%",
+            height: "auto",
+            paddingBottom: "100%",
+            position: "relative",
+            background: "black",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              zIndex: 1,
+              boxShadow: "inset 0px 0px 50px 20px #000000",
+            }}
+          ></div>
+          <iframe
+            src="https://giphy.com/embed/26ueZdaY7ylDHIkgw"
+            width="100%"
+            height="100%"
+            style={{
+              opacity: .3,
+              position: "absolute",
+            }}
+            frameBorder="0"
+            className="giphy-embed"
+            allowFullScreen
+          ></iframe>
+        </div>
+        {/* <p>
+          <a href="https://giphy.com/gifs/trippy-abstract-pi-slices-26ueZdaY7ylDHIkgw">
+            via GIPHY
+          </a>
+        </p> */}
       </main>
     </>
   );
