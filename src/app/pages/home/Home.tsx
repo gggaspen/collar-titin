@@ -98,7 +98,7 @@ const Home = () => {
             transform: `rotate(${
               +windowWidth.slice(2) < 800 ? "45deg" : "180deg"
             })`,
-            filter: "blur(6px)",
+            // filter: "blur(6px)",
           }}
         />
 
@@ -141,7 +141,7 @@ const Home = () => {
 
         {/* MAIN TITLE */}
 
-        <Glitch />
+        <Glitch text="GGGASPEN" />
 
         {/* IFRAME LIST */}
 
