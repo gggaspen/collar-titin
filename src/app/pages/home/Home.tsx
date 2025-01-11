@@ -32,7 +32,20 @@ const Home = () => {
           height: "20",
           base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
           id: "2005593747",
-          color: "333333",
+          color: "1c0048",
+          auto_play: false,
+          inverse: true,
+        },
+      },
+      {
+        id: "1265384740",
+        title: "GGGASPEN",
+        iframeConfig: {
+          width: "100%",
+          height: "20",
+          base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
+          id: "1265384740",
+          color: "1c0048",
           auto_play: false,
           inverse: true,
         },
@@ -45,7 +58,7 @@ const Home = () => {
           height: "20",
           base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
           id: "1124831770",
-          color: "333333",
+          color: "1c0048",
           auto_play: false,
           inverse: true,
         },
@@ -132,27 +145,40 @@ const Home = () => {
 
         {/* IFRAME LIST */}
 
-        <div className="h-dvh md:px-40 px-4 relative bg-black z-0 mt-20">
+        <div className="h-dvh md:px-40 px-4 py-4 relative bg-black mt-20 z-0">
+          <hr className="bg-white my-2 opacity-30" />
           {tracks.map((track) => (
-            <div className="p-2" key={track.id}>
-              <Iframe {...track.iframeConfig} color="ff0000" />
+            <div className="py-4" key={track.id}>
+              <Iframe {...track.iframeConfig} />
             </div>
           ))}
-          {/* SOCIAL */}
+          <hr className="bg-white my-4 opacity-30" />
 
-          <section className="md:px-40 px-4 relative flex items-center my-4 justify-center py-4">
-            <Link href={"https://instagram.com/gggaspen"} className="gap-2">
-              <Image
-                src="https://i.postimg.cc/0NM8hg7n/ig.png"
-                alt="instagram"
-                width="20"
-                height="0"
-              />
-            </Link>
+          {/* SPORTIFY PLAYLIST */}
+
+          <section className="md:px-40 px-4 relative flex items-center justify-center py-4">
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
           </section>
         </div>
+        {/* SOCIAL */}
 
-        {/* SPORTIFY PLAYLIST */}
+        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black">
+          <Link href={"https://instagram.com/gggaspen"} className="gap-2">
+            <Image
+              src="https://i.postimg.cc/0NM8hg7n/ig.png"
+              alt="instagram"
+              width="20"
+              height="0"
+            />
+          </Link>
+        </section>
       </main>
     </>
   );
