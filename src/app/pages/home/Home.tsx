@@ -82,7 +82,7 @@ const Home = () => {
         {/* BACKGROUND */}
 
         <Image
-          src="/img/background/diamond-fractal-explosion-a-dazzling-display-of-geometric-brilliance-photo.jpg"
+          src="/img/background/diamons-1.png"
           alt="instagram"
           width="800"
           height="0"
@@ -145,7 +145,7 @@ const Home = () => {
 
         {/* IFRAME LIST */}
 
-        <div className="h-dvh md:px-40 px-4 py-4 relative bg-black mt-20 z-0">
+        <div className="md:px-40 px-4 py-4 relative bg-black mt-20 z-0">
           <hr className="bg-white my-2 opacity-30" />
           {tracks.map((track) => (
             <div className="py-4" key={track.id}>
@@ -153,20 +153,21 @@ const Home = () => {
             </div>
           ))}
           <hr className="bg-white my-4 opacity-30" />
-
-          {/* SPORTIFY PLAYLIST */}
-
-          <section className="md:px-40 px-4 relative flex items-center justify-center py-4">
-            <iframe
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </section>
         </div>
+
+        {/* SPORTIFY PLAYLIST */}
+
+        <section className="md:px-40 px-4 relative flex items-center justify-center py-4">
+          <iframe
+            style={{ borderRadius: "12px" }}
+            src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </section>
+
         {/* SOCIAL */}
 
         <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black">
