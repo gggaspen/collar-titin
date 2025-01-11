@@ -4,7 +4,7 @@ import "./Glitch.css";
 const Glitch = () => {
   return (
     <>
-      <div className="md:px-40 px-4 flex justify-center align-center mt-20 mb-10">
+      <div className="md:px-40 px-4 flex justify-center align-center">
         <div
           className={`glitch ${press_Start_2P.className} text-2xl md:text-4xl`}
           data-text="GGGASPEN"
