@@ -128,8 +128,8 @@ const Home = () => {
 
         {/* LINKS */}
 
-        <section className="md:px-40 px-4 relative flex items-center justify-center my-4 mb-10 z-10">
-          <Link href={"https://soundcloud.com/gggaspen"}>
+        <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
+          <Link className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center" href={"https://soundcloud.com/gggaspen"}>
             <Image
               src="https://i.postimg.cc/SQrpTQwq/soundcloud.png"
               alt="instagram"
@@ -141,11 +141,13 @@ const Home = () => {
 
         {/* MAIN TITLE */}
 
-        <Glitch text="GGGASPEN" />
+        <section className="flex items-center justify-center z-20 w-full">
+          <Glitch text="GGGASPEN" />
+        </section>
 
         {/* IFRAME LIST */}
 
-        <div className="md:px-40 px-4 py-4 relative bg-black mt-20 z-0">
+        <div className="md:px-40 px-4 py-4 relative bg-black z-0">
           <hr className="bg-white my-2 opacity-30" />
           {tracks.map((track) => (
             <div className="py-4" key={track.id}>
@@ -157,7 +159,7 @@ const Home = () => {
 
         {/* SPORTIFY PLAYLIST */}
 
-        <section className="md:px-40 px-4 relative flex items-center justify-center py-4">
+        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
           <iframe
             style={{ borderRadius: "12px" }}
             src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
@@ -204,7 +206,7 @@ const Home = () => {
             width="100%"
             height="100%"
             style={{
-              opacity: .3,
+              opacity: 0.3,
               position: "absolute",
             }}
             frameBorder="0"
@@ -212,11 +214,6 @@ const Home = () => {
             allowFullScreen
           ></iframe>
         </div>
-        {/* <p>
-          <a href="https://giphy.com/gifs/trippy-abstract-pi-slices-26ueZdaY7ylDHIkgw">
-            via GIPHY
-          </a>
-        </p> */}
       </main>
     </>
   );
