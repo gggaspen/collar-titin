@@ -37,32 +37,32 @@ const Home = () => {
           inverse: true,
         },
       },
-      {
-        id: "1265384740",
-        title: "GGGASPEN",
-        iframeConfig: {
-          width: "100%",
-          height: "20",
-          base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
-          id: "1265384740",
-          color: "1c0048",
-          auto_play: false,
-          inverse: true,
-        },
-      },
-      {
-        id: "1124831770",
-        title: "GGGASPEN",
-        iframeConfig: {
-          width: "100%",
-          height: "20",
-          base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
-          id: "1124831770",
-          color: "1c0048",
-          auto_play: false,
-          inverse: true,
-        },
-      },
+      // {
+      //   id: "1265384740",
+      //   title: "GGGASPEN",
+      //   iframeConfig: {
+      //     width: "100%",
+      //     height: "20",
+      //     base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
+      //     id: "1265384740",
+      //     color: "1c0048",
+      //     auto_play: false,
+      //     inverse: true,
+      //   },
+      // },
+      // {
+      //   id: "1124831770",
+      //   title: "GGGASPEN",
+      //   iframeConfig: {
+      //     width: "100%",
+      //     height: "20",
+      //     base: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks",
+      //     id: "1124831770",
+      //     color: "1c0048",
+      //     auto_play: false,
+      //     inverse: true,
+      //   },
+      // },
     ],
   };
 
@@ -129,7 +129,10 @@ const Home = () => {
         {/* LINKS */}
 
         <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
-          <Link className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center" href={"https://soundcloud.com/gggaspen"}>
+          <Link
+            className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center"
+            href={"https://soundcloud.com/gggaspen"}
+          >
             <Image
               src="https://i.postimg.cc/SQrpTQwq/soundcloud.png"
               alt="instagram"
@@ -159,7 +162,7 @@ const Home = () => {
 
         {/* SPORTIFY PLAYLIST */}
 
-        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
+        {/* <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
           <iframe
             style={{ borderRadius: "12px" }}
             src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
@@ -168,7 +171,7 @@ const Home = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-        </section>
+        </section>*/}
 
         {/* SOCIAL */}
 
