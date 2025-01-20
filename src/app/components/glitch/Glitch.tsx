@@ -14,7 +14,12 @@ const Glitch = ({ text }: Readonly<{ text: string }>) => {
             <span
               className={`${press_Start_2P.className}`}
               key={index}
-              style={{ ["--index"]: index } as any}
+              style={
+                {
+                  ["--index"]: index,
+                  fontStyle: "italic",
+                } as any
+              }
             >
               {text}
             </span>

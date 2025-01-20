@@ -4,11 +4,11 @@ import Iframe from "@/app/components/iframe/Iframe";
 import MainData from "@/app/interfaces/main-data.interface";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-// import CharGrid from "@/app/components/char-grid/CharGrid";
 import Glitch from "@/app/components/glitch/Glitch";
 import Link from "next/link";
 import Cover from "@/app/components/cover/cover.component";
 import { russo } from "@/app/ui/fonts";
+import Background from "@/app/components/background/Background";
 
 const Home = () => {
   const data: MainData = {
@@ -66,7 +66,7 @@ const Home = () => {
     ],
   };
 
-  const { mainIframeConfig, title, subtitle, tracks } = data;
+  const { mainIframeConfig, tracks } = data;
 
   const [windowHeight, setWindowHeight] = useState("0");
   const [windowWidth, setWindowWidth] = useState("0");
@@ -78,75 +78,68 @@ const Home = () => {
 
   return (
     <>
+      {/* HEADER */}
+
+      <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0">
+        <Iframe {...mainIframeConfig} />
+      </header>
+
+      {/* BACKGROUND */}
+
+      {Number(windowWidth.replace("px", "")) < 850 ? <Background /> : null}
+
+      {/* MAIN */}
+
       <main className="bg-black h-screen w-screen md:pt-10 pt-4">
-        {/* BACKGROUND */}
-
-        <Image
-          src="/img/background/diamons-1.png"
-          alt="instagram"
-          width="800"
-          height="0"
-          className="absolute"
-          style={{
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: windowHeight,
-            objectFit: "cover",
-            position: "fixed",
-            // opacity: 0.3,
-            transform: `rotate(${
-              +windowWidth.slice(2) < 800 ? "45deg" : "180deg"
-            })`,
-            // filter: "blur(6px)",
-          }}
-        />
-
         {/* HEADER IFRAME */}
 
-        <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-20 fixed top-0">
-          <Iframe {...mainIframeConfig} />
-        </header>
+        <div
+          className="flex items-center flex-col"
+          style={{
+            height: windowHeight,
+            width: windowWidth,
+          }}
+        >
+          {/* COVER IMG */}
 
-        {/* COVER IMG */}
+          <section className="mt-16 md:mt-14 md:px-40 px-4 flex flex-col justify-center items-center text-center relative">
+            <div className="relative overflow-hidden flex justify-center">
+              <Cover
+                src="/img/cover/vol-1.png"
+                size="md"
+                shape="circle"
+                classList={[""]}
+              />
+            </div>
+            <span
+              className={`${russo.className} mt-4 z-10 bg-black w-fit text-center px-2`}
+            >
+              FEEL THE HARD
+            </span>
+          </section>
 
-        <section className="mt-16 md:mt-14 md:px-40 px-4 flex flex-col justify-center items-center text-center relative">
-          <div className="relative overflow-hidden flex justify-center">
-            <Cover
-              src="/img/cover/vol-1.png"
-              size="md"
-              shape="square"
-              classList={[""]}
-            />
-          </div>
-          <span
-            className={`${russo.className} mt-4 z-10 bg-black w-fit text-center px-2`}
-          >
-            FEEL THE HARD
-          </span>
-        </section>
+          {/* LINKS */}
 
-        {/* LINKS */}
+          <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
+            <Link
+              className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center"
+              href={"https://soundcloud.com/gggaspen"}
+            >
+              <Image
+                src="https://i.postimg.cc/SQrpTQwq/soundcloud.png"
+                alt="instagram"
+                width="40"
+                height="20"
+              />
+            </Link>
+          </section>
 
-        <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
-          <Link
-            className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center"
-            href={"https://soundcloud.com/gggaspen"}
-          >
-            <Image
-              src="https://i.postimg.cc/SQrpTQwq/soundcloud.png"
-              alt="instagram"
-              width="40"
-              height="20"
-            />
-          </Link>
-        </section>
+          {/* MAIN TITLE */}
 
-        {/* MAIN TITLE */}
-
-        <section className="flex items-center justify-center z-20 w-full">
-          <Glitch text="GGGASPEN" />
-        </section>
+          <section className="flex items-center justify-center z-20 w-full">
+            <Glitch text="GGGASPEN" />
+          </section>
+        </div>
 
         {/* IFRAME LIST */}
 
