@@ -32,7 +32,7 @@ const Background = () => {
               width={"1000"}
               height={"0"}
               style={{
-                filter: `blur(20px)`,
+                // filter: `blur(20px)`,
                 ...style,
               }}
             />
