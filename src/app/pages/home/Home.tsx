@@ -179,7 +179,7 @@ const Home = () => {
           </Link>
         </section>
 
-        <div
+        {/* <div
           style={{
             width: "100%",
             height: "auto",
@@ -187,6 +187,7 @@ const Home = () => {
             position: "relative",
             background: "black",
           }}
+          className="md:px-90 flex justify-center"
         >
           <div
             style={{
@@ -209,7 +210,7 @@ const Home = () => {
             className="giphy-embed"
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
       </main>
     </>
   );
