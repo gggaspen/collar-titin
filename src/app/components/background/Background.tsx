@@ -33,7 +33,7 @@ const Background = () => {
               height={"0"}
               style={{
                 // filter: `blur(20px)`,
-                opacity: 0.8,
+                // opacity: 0.8,
                 ...style,
               }}
             />
