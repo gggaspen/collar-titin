@@ -29,10 +29,11 @@ const Background = () => {
             <Image
               src="/img/background/DSC_0039.png"
               alt=""
-              width={"1000"}
+              width={600}
               height={"0"}
               style={{
                 // filter: `blur(20px)`,
+                opacity: 0.8,
                 ...style,
               }}
             />
@@ -43,7 +44,7 @@ const Background = () => {
                   src={img.src}
                   alt={"Glitched background"}
                   className="glitch__layer"
-                  width={"1000"}
+                  width={600}
                   height={"0"}
                   style={style}
                 />
