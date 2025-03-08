@@ -6,7 +6,7 @@ import { postCounter } from "./services/counter.service";
 
 function Page() {
   useEffect(() => {
-    postCounter();
+    // postCounter();
   }, []);
 
   return (

@@ -80,9 +80,14 @@ const Home = () => {
     <>
       {/* HEADER */}
 
-      <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0">
-        <Iframe {...mainIframeConfig} />
-      </header>
+      {/* <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0"></header> */}
+
+      <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden border border-slate-800 p-[1.5px]">
+        <div className="animate-rotate absolute inset-0 h-full w-full bg-[conic-gradient(#ff0000_20deg,transparent_120deg)]"></div>
+        <div className="relative z-20 flex w-full bg-black p-4">
+          <Iframe {...mainIframeConfig} />
+        </div>
+      </div>
 
       {/* BACKGROUND */}
 
@@ -143,14 +148,16 @@ const Home = () => {
 
         {/* IFRAME LIST */}
 
-        <div className="md:px-40 px-4 py-4 relative bg-black z-0">
-          <hr className="bg-white my-2 opacity-30" />
-          {tracks.map((track) => (
-            <div className="py-4" key={track.id}>
-              <Iframe {...track.iframeConfig} />
-            </div>
-          ))}
-          <hr className="bg-white my-4 opacity-30" />
+        <div className="w-100">
+          <div className="md:px-40 px-4 py-4 relative bg-black z-0">
+            <hr className="bg-white my-2 opacity-30" />
+            {tracks.map((track) => (
+              <div className="py-4" key={track.id}>
+                <Iframe {...track.iframeConfig} />
+              </div>
+            ))}
+            <hr className="bg-white my-4 opacity-30" />
+          </div>
         </div>
 
         {/* SPORTIFY PLAYLIST */}
@@ -168,7 +175,7 @@ const Home = () => {
 
         {/* SOCIAL */}
 
-        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black">
+        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black w-100">
           <Link href={"https://instagram.com/gggaspen"} className="gap-2">
             <Image
               src="https://i.postimg.cc/0NM8hg7n/ig.png"
