@@ -46,7 +46,7 @@ const Background = () => {
                   className="glitch__layer"
                   width={600}
                   height={"0"}
-                  style={style}
+                  style={{ ...style, opacity: 0.05 }}
                 />
               ))}
             </div>
