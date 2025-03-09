@@ -15,7 +15,7 @@ const Background = () => {
   }, []);
 
   const imgList = [{ src }, { src }, { src }];
-  const style: CSSProperties = {
+  const styles: CSSProperties = {
     width: "100%",
     height: windowHeight,
     objectFit: "cover",
@@ -27,17 +27,17 @@ const Background = () => {
         <div className="fixed">
           <div className="glitch">
             <Image
-              src="/img/background/DSC_0039.png"
-              alt=""
+              src={imgList[0].src}
+              alt={"Background"}
               width={600}
               height={"0"}
               style={{
                 // filter: `blur(20px)`,
                 // opacity: 0.8,
-                ...style,
+                ...styles,
               }}
             />
-            {/* <div className="glitch__layers">
+            <div className="glitch__layers">
               {imgList.map((img, index) => (
                 <Image
                   key={index}
@@ -46,10 +46,10 @@ const Background = () => {
                   className="glitch__layer"
                   width={600}
                   height={"0"}
-                  style={{ ...style, opacity: 0.05 }}
+                  style={styles}
                 />
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
