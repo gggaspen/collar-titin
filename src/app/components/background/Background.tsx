@@ -37,7 +37,7 @@ const Background = () => {
                 ...style,
               }}
             />
-            <div className="glitch__layers">
+            {/* <div className="glitch__layers">
               {imgList.map((img, index) => (
                 <Image
                   key={index}
@@ -49,7 +49,7 @@ const Background = () => {
                   style={{ ...style, opacity: 0.05 }}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
