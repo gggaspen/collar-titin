@@ -39,7 +39,6 @@ const Background = () => {
 
   return (
     <div>
-      {/* <div style={gradient2}></div> */}
       <div className="absolute">
         <div className="fixed">
           <div className="glitch">
@@ -51,8 +50,6 @@ const Background = () => {
               width={600}
               height={"0"}
               style={{
-                // filter: `blur(5px)`,
-                // opacity: 0.5,
                 ...styles,
               }}
             />

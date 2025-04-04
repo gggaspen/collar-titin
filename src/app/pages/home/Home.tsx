@@ -94,35 +94,36 @@ const Home = () => {
         {/* HEADER IFRAME */}
 
         <div
-          className="flex items-center flex-col"
+          className="flex items-center flex-col justify-center justify-between"
           style={{
-            height: windowHeight,
+            height: `${window.innerHeight / 1.5}px`,
             width: windowWidth,
           }}
         >
           {/* COVER IMG */}
 
-          <section className="mt-16 md:mt-14 md:px-40 px-4 flex flex-col justify-center items-center text-center relative">
-            <div className="relative overflow-hidden flex justify-center">
+          <section className="">
+            <div className="relative overflow-hidden flex mt-20">
               <Cover
                 src="/img/cover/vol-1.png"
                 size="md"
-                shape="circle"
+                shape="round-square"
                 classList={[""]}
               />
             </div>
-            <span
-              className={`${russo.className} mt-4 z-10 bg-black w-fit text-center px-2`}
+            {/* <span
+              className={`${russo.className} bg-black w-fit text-center z-10 mt-40 relative`}
             >
               FEEL THE HARD
-            </span>
+            </span> */}
           </section>
 
           {/* LINKS */}
 
-          <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
+          <section className="">
             <Link
-              className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center"
+              className="z-20"
+              // className="p-2 rounded-full h-10 w-10 flex items-center justify-center border border-gray-500"
               href={"https://soundcloud.com/gggaspen"}
             >
               <Image
@@ -136,7 +137,7 @@ const Home = () => {
 
           {/* MAIN TITLE */}
 
-          <section className="flex items-center justify-center z-20 w-full">
+          <section className="">
             <Glitch text="GGGASPEN" />
           </section>
         </div>
@@ -155,7 +156,7 @@ const Home = () => {
 
         {/* SPORTIFY PLAYLIST */}
 
-        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
+        {/* <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
           <iframe
             style={{ borderRadius: "12px" }}
             src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
@@ -164,11 +165,11 @@ const Home = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-        </section>
+        </section> */}
 
         {/* SOCIAL */}
 
-        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black">
+        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black flex-col">
           <Link href={"https://instagram.com/gggaspen"} className="gap-2">
             <Image
               src="https://i.postimg.cc/0NM8hg7n/ig.png"
@@ -177,6 +178,8 @@ const Home = () => {
               height="0"
             />
           </Link>
+
+          <p className="mt-20 font-serif">G • G • G</p>
         </section>
 
         {/* <div
