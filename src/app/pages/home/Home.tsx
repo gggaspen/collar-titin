@@ -80,7 +80,7 @@ const Home = () => {
     <>
       {/* HEADER */}
 
-      <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0">
+      <header className="w-full py-4 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0">
         <Iframe {...mainIframeConfig} />
       </header>
 
@@ -155,7 +155,7 @@ const Home = () => {
 
         {/* SPORTIFY PLAYLIST */}
 
-        {/* <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
+        <section className="md:px-40 px-4 relative flex items-center justify-center py-4 bg-black">
           <iframe
             style={{ borderRadius: "12px" }}
             src="https://open.spotify.com/embed/playlist/4kBcZPSgXcAmO9O4ZKorMt?utm_source=generator&theme=0"
@@ -164,7 +164,7 @@ const Home = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-        </section>*/}
+        </section>
 
         {/* SOCIAL */}
 
