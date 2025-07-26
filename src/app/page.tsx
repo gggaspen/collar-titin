@@ -2,18 +2,20 @@
 
 import Home from "./pages/home/Home";
 import React, { useEffect } from "react";
-import { postCounter } from "./services/counter.service";
+/**
+ import { postCounter } from "./services/counter.service";
+ * 
+ */
 
 function Page() {
   useEffect(() => {
-    // postCounter();
+    /**
+     * Contador de visitas:
+     * postCounter();
+     */
   }, []);
 
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 
 export default Page;
