@@ -9,6 +9,7 @@ import Link from "next/link";
 import Cover from "@/app/components/cover/cover.component";
 import { russo } from "@/app/ui/fonts";
 import Background from "@/app/components/background/Background";
+import dynamic from "next/dynamic";
 
 const Home = () => {
   const data: MainData = {
@@ -72,8 +73,10 @@ const Home = () => {
   const [windowWidth, setWindowWidth] = useState("0");
 
   useEffect(() => {
-    setWindowHeight(window.innerHeight + "px");
-    setWindowWidth(window.innerWidth + "px");
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight + "px");
+      setWindowWidth(window.innerWidth + "px");
+    }
   }, []);
 
   return (
