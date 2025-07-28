@@ -9,7 +9,6 @@ import Link from "next/link";
 import Cover from "@/app/components/cover/cover.component";
 import { russo } from "@/app/ui/fonts";
 import Background from "@/app/components/background/Background";
-import dynamic from "next/dynamic";
 
 const Home = () => {
   const data: MainData = {
@@ -73,19 +72,22 @@ const Home = () => {
   const [windowWidth, setWindowWidth] = useState("0");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWindowHeight(window.innerHeight + "px");
-      setWindowWidth(window.innerWidth + "px");
-    }
+    setWindowHeight(window.innerHeight + "px");
+    setWindowWidth(window.innerWidth + "px");
   }, []);
 
   return (
     <>
       {/* HEADER */}
 
-      <header className="w-full py-4 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0">
-        <Iframe {...mainIframeConfig} />
-      </header>
+      {/* <header className="w-full h-14 md:px-40 px-4 bg-black flex items-center z-30 fixed top-0"></header> */}
+
+      <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden border border-slate-800 p-[1.5px]">
+        <div className="animate-rotate absolute inset-0 h-full w-full bg-[conic-gradient(#ff0000_20deg,transparent_120deg)]"></div>
+        <div className="relative z-20 flex w-full bg-black p-4">
+          <Iframe {...mainIframeConfig} />
+        </div>
+      </div>
 
       {/* BACKGROUND */}
 
@@ -97,36 +99,35 @@ const Home = () => {
         {/* HEADER IFRAME */}
 
         <div
-          className="flex items-center flex-col justify-center justify-between"
+          className="flex items-center flex-col"
           style={{
-            height: `${window.innerHeight / 1.5}px`,
+            height: windowHeight,
             width: windowWidth,
           }}
         >
           {/* COVER IMG */}
 
-          <section className="">
-            <div className="relative overflow-hidden flex mt-20">
+          <section className="mt-16 md:mt-14 md:px-40 px-4 flex flex-col justify-center items-center text-center relative">
+            <div className="relative overflow-hidden flex justify-center">
               <Cover
                 src="/img/cover/vol-1.png"
                 size="md"
-                shape="round-square"
+                shape="circle"
                 classList={[""]}
               />
             </div>
-            {/* <span
-              className={`${russo.className} bg-black w-fit text-center z-10 mt-40 relative`}
+            <span
+              className={`${russo.className} mt-4 z-10 bg-black w-fit text-center px-2`}
             >
               FEEL THE HARD
-            </span> */}
+            </span>
           </section>
 
           {/* LINKS */}
 
-          <section className="">
+          <section className="md:px-40 px-4 mb-20 relative flex items-center justify-center my-4 mb-10 z-10">
             <Link
-              className="z-20"
-              // className="p-2 rounded-full h-10 w-10 flex items-center justify-center border border-gray-500"
+              className="p-2 bg-black rounded-full h-10 w-10 flex items-center justify-center"
               href={"https://soundcloud.com/gggaspen"}
             >
               <Image
@@ -140,21 +141,23 @@ const Home = () => {
 
           {/* MAIN TITLE */}
 
-          <section className="">
+          <section className="flex items-center justify-center z-20 w-full">
             <Glitch text="GGGASPEN" />
           </section>
         </div>
 
         {/* IFRAME LIST */}
 
-        <div className="md:px-40 px-4 py-4 relative bg-black z-0">
-          <hr className="bg-white my-2 opacity-30" />
-          {tracks.map((track) => (
-            <div className="py-4" key={track.id}>
-              <Iframe {...track.iframeConfig} />
-            </div>
-          ))}
-          <hr className="bg-white my-4 opacity-30" />
+        <div className="w-100">
+          <div className="md:px-40 px-4 py-4 relative bg-black z-0">
+            <hr className="bg-white my-2 opacity-30" />
+            {tracks.map((track) => (
+              <div className="py-4" key={track.id}>
+                <Iframe {...track.iframeConfig} />
+              </div>
+            ))}
+            <hr className="bg-white my-4 opacity-30" />
+          </div>
         </div>
 
         {/* SPORTIFY PLAYLIST */}
@@ -168,11 +171,11 @@ const Home = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-        </section> */}
+        </section>*/}
 
         {/* SOCIAL */}
 
-        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black flex-col">
+        <section className="md:px-40 px-4 py-40 relative flex items-center justify-center bg-black w-100">
           <Link href={"https://instagram.com/gggaspen"} className="gap-2">
             <Image
               src="https://i.postimg.cc/0NM8hg7n/ig.png"
@@ -181,8 +184,6 @@ const Home = () => {
               height="0"
             />
           </Link>
-
-          <p className="mt-20 font-serif">G • G • G</p>
         </section>
 
         {/* <div
