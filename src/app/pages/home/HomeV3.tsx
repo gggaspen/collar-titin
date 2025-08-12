@@ -72,10 +72,10 @@ const HomeV3 = () => {
       {/* <!-- Main altar container --> */}
       <div className="absolute transform w-11/12 max-w-2xl h-full altarp-8 altar">
         {/* <!-- Bone decorations --> */}
-        <div className="bone-decoration"></div>
+        {/* <div className="bone-decoration"></div> */}
 
         {/* <!-- Floating pentagram --> */}
-        <div className="pentagram"></div>
+        {/* <div className="pentagram"></div> */}
 
         {/* <!-- Title --> */}
         <div className="absolute left-0 right-0 text-center">
