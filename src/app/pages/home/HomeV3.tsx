@@ -2,6 +2,7 @@
 
 import Iframe from "@/app/components/iframe/Iframe";
 import MainData from "@/app/interfaces/main-data.interface";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HomeV3 = () => {
@@ -64,13 +65,19 @@ const HomeV3 = () => {
 
   return (
     <div>
-      <video
+      <motion.video
         src="/video/glitch.mp4"
         autoPlay
         loop
         muted
         className="h-full absolute w-full object-cover z-0"
-      ></video>
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2, ease: "easeIn" }}
+        style={{ objectFit: "cover" }}
+        preload="auto"
+        playsInline
+      ></motion.video>
       <div className="absolute flex justify-center items-center w-full h-full">
         <div className="flex flex-col items-center gap-4 z-10">
           <h1
