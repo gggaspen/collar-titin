@@ -12,4 +12,5 @@ export default interface IframeConfig {
   show_teaser?: boolean;
   visual?: boolean;
   inverse?: boolean;
+  title?: string;
 }
