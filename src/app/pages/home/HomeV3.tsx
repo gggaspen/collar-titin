@@ -65,7 +65,7 @@ const HomeV3 = () => {
 
   return (
     <div>
-      <motion.video
+      {/* <motion.video
         src="/video/glitch.mp4"
         autoPlay
         loop
@@ -77,7 +77,15 @@ const HomeV3 = () => {
         style={{ objectFit: "cover" }}
         preload="auto"
         playsInline
-      ></motion.video>
+      ></motion.video> */}
+      <Image
+        src="/img/glitch.gif"
+        alt="glitch background"
+        width={1280}
+        height={0}
+        className="h-full absolute w-full object-cover z-0"
+        style={{ objectFit: "cover" }}
+      />
       <div className="absolute flex justify-center items-center w-full h-full">
         <div className="flex flex-col items-center gap-4 z-10">
           <h1
@@ -97,7 +105,7 @@ const HomeV3 = () => {
             height={0}
             className="mx-auto mb-4"
           />
-          <div className="bg-red-500 bg-opacity-30 p-3 rounded-lg shadow-lg">
+          <div className="bg-black bg-opacity-50 bg-opacity-30 p-3 rounded-lg shadow-lg border border-red-500">
             <Iframe {...mainIframeConfig} color="f00" height="20" />
           </div>
         </div>
