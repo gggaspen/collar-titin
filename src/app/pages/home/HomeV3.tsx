@@ -2,7 +2,7 @@
 
 import Iframe from "@/app/components/iframe/Iframe";
 import MainData from "@/app/interfaces/main-data.interface";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HomeV3 = () => {
